@@ -1,0 +1,18 @@
+[package]
+name = "snapref"
+version = "0.1.0"
+edition = "2021"
+authors = ["JaydenCJ"]
+rust-version = "1.75"
+description = "Shadow git-style snapshots of your working tree per agent turn: blame any line to the turn that wrote it, diff turns, restore any state."
+license = "MIT"
+repository = "https://github.com/JaydenCJ/snapref"
+keywords = ["agent", "snapshot", "blame", "undo", "cli"]
+categories = ["command-line-utilities", "development-tools"]
+
+[dependencies]
+# None. snapref is std-only by design: offline, deterministic, zero supply chain.
+
+[profile.release]
+strip = true
+lto = true
